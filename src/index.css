@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cupido-base: #13101A;
+  --color-cupido-surface: #1B1526;
+  --color-cupido-card: #251D35;
+  --color-cupido-red: #DC2626;
+  --color-cupido-pink: #F43F5E;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #13101A;
+    color: #F8FAFC;
+    font-weight: 600;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Glass UI Styles identical to cupidoradio.netlify.app */
+.glass-nav {
+  background: rgba(11, 7, 17, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.text-glow {
+  text-shadow: 0 0 25px rgba(229, 26, 45, 0.65);
+}
+
+/* Equalizer animations */
+@keyframes wave {
+  0%, 100% {
+    height: 8px;
+  }
+  50% {
+    height: 32px;
+  }
+}
+
+.animate-wave-1 {
+  animation: wave 0.8s ease-in-out infinite;
+}
+.animate-wave-2 {
+  animation: wave 1.1s ease-in-out infinite 0.15s;
+}
+.animate-wave-3 {
+  animation: wave 0.7s ease-in-out infinite 0.3s;
+}
+.animate-wave-4 {
+  animation: wave 1.0s ease-in-out infinite 0.1s;
+}
+.animate-wave-5 {
+  animation: wave 0.9s ease-in-out infinite 0.25s;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #13101A;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(229, 26, 45, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 26, 45, 0.8);
+}

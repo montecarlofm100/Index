@@ -1,0 +1,50 @@
+{
+  "id": "/",
+  "name": "Cupido Radio - La que te enamora",
+  "short_name": "Cupido Radio",
+  "description": "Emisora oficial de música romántica y baladas de amor en vivo las 24 horas. Señal HD Digital.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "window-controls-overlay"],
+  "orientation": "portrait",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "background_color": "#13101A",
+  "theme_color": "#13101A",
+  "lang": "es",
+  "categories": ["music", "entertainment"],
+  "icons": [
+    {
+      "src": "/Cupido-Color-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Cupido-Color-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/Cupido-Color-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
+      "platform": "wide",
+      "label": "Cupido Radio - Reproductor Web"
+    },
+    {
+      "src": "/Cupido-Color-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "platform": "narrow",
+      "label": "Cupido Radio - Móvil"
+    }
+  ]
+}

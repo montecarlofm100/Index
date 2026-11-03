@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Vibrant Cupido Red Gradient -->
+    <radialGradient id="cupidoBgGrad" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stopColor="#EA1D42"/>
+      <stop offset="70%" stopColor="#D51336"/>
+      <stop offset="100%" stopColor="#B60A28"/>
+    </radialGradient>
+
+    <!-- Glossy Pink Heart Gradient -->
+    <linearGradient id="pinkHeartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#FF2E82"/>
+      <stop offset="50%" stopColor="#E81669"/>
+      <stop offset="100%" stopColor="#C40B54"/>
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Base Circular Badge -->
+  <circle cx="256" cy="256" r="236" fill="url(#cupidoBgGrad)" filter="url(#logoShadow)"/>
+  <circle cx="256" cy="256" r="236" stroke="#A70822" stroke-width="4"/>
+
+  <!-- Decorative Outer Dashed Arcs -->
+  <circle cx="256" cy="256" r="218" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8 16 45 20 180 25 35 15 70 20"/>
+
+  <!-- Sunburst Rays above Heart -->
+  <line x1="256" y1="76" x2="256" y2="116" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  <line x1="224" y1="90" x2="238" y2="116" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="288" y1="90" x2="274" y2="116" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Upper Heart Outline Wireframe -->
+  <path d="M 256 150 C 230 115 160 115 145 165 C 130 215 210 245 256 270 C 302 245 382 215 367 165 C 352 115 282 115 256 150 Z" 
+        stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85"/>
+
+  <!-- Left Angel Wing -->
+  <g fill="#FFFFFF" stroke="#101014" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Feather layers -->
+    <path d="M 195 235 C 180 205 130 145 110 148 C 108 160 128 178 140 188 C 120 170 98 162 95 174 C 95 186 122 198 135 206 C 112 192 88 190 85 204 C 83 216 115 218 132 222 C 105 215 85 220 83 234 C 82 245 106 242 125 240 C 145 238 185 236 195 235 Z"/>
+    <!-- Wing Inner Detail Lines -->
+    <path d="M 148 185 C 160 198 180 212 190 220" stroke="#E51A3B" stroke-width="2" fill="none"/>
+    <path d="M 138 205 C 152 214 172 222 185 226" stroke="#E51A3B" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Right Angel Wing -->
+  <g fill="#FFFFFF" stroke="#101014" stroke-width="2.5" stroke-linejoin="round">
+    <!-- Feather layers -->
+    <path d="M 317 235 C 332 205 382 145 402 148 C 404 160 384 178 372 188 C 392 170 414 162 417 174 C 417 186 390 198 377 206 C 400 192 424 190 427 204 C 429 216 397 218 380 222 C 407 215 427 220 429 234 C 430 245 406 242 387 240 C 367 238 327 236 317 235 Z"/>
+    <!-- Wing Inner Detail Lines -->
+    <path d="M 364 185 C 352 198 332 212 322 220" stroke="#E51A3B" stroke-width="2" fill="none"/>
+    <path d="M 374 205 C 360 214 340 222 327 226" stroke="#E51A3B" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Side Small Hearts -->
+  <!-- Left mini heart -->
+  <path d="M 98 226 C 90 218 80 220 78 228 C 76 238 88 244 98 250 C 108 244 120 238 118 228 C 116 220 106 218 98 226 Z" fill="#FFFFFF"/>
+  <!-- Right mini heart -->
+  <path d="M 414 226 C 406 218 396 220 394 228 C 392 238 404 244 414 250 C 424 244 436 238 434 228 C 432 220 422 218 414 226 Z" fill="#FFFFFF"/>
+
+  <!-- Central Pink Heart -->
+  <g>
+    <!-- Black Outer Border -->
+    <path d="M 256 226 C 228 178 190 148 214 124 C 236 102 254 128 256 136 C 258 128 276 102 298 124 C 322 148 284 178 256 226 Z" 
+          fill="#101014" stroke="#101014" stroke-width="12" stroke-linejoin="round"/>
+    <!-- White Outline -->
+    <path d="M 256 226 C 228 178 190 148 214 124 C 236 102 254 128 256 136 C 258 128 276 102 298 124 C 322 148 284 178 256 226 Z" 
+          fill="#FFFFFF" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    <!-- Hot Pink Fill -->
+    <path d="M 256 223 C 230 178 194 150 215 127 C 234 107 252 130 256 137 C 260 130 278 107 297 127 C 318 150 282 178 256 223 Z" 
+          fill="url(#pinkHeartGrad)"/>
+    <!-- White Gloss Reflection -->
+    <ellipse cx="230" cy="133" rx="10" ry="6" transform="rotate(-30 230 133)" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+
+  <!-- Typography "Cupido" & "Radio" -->
+  <!-- Layer 1: Heavy Black Silhouette / Drop outline -->
+  <g fill="#101014" stroke="#101014" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <!-- CUPIDO Path backing -->
+    <path d="M 120 285 C 105 260 120 210 165 210 C 195 210 205 230 195 250 C 185 265 160 265 155 260 C 150 252 165 240 172 232 C 160 225 140 235 135 260 C 130 285 148 300 170 295 C 185 292 195 280 200 272 
+             L 212 288 C 215 268 228 250 248 250 C 265 250 268 265 262 285 C 275 265 290 250 310 250 C 330 250 338 268 330 295 
+             L 330 252 L 354 252 L 350 288 C 362 268 375 252 395 252 C 418 252 425 270 418 295 
+             C 410 320 385 335 360 335 C 330 335 250 365 175 375 C 220 362 315 340 370 330 C 400 325 412 300 405 280 Z"/>
+    
+    <!-- RADIO Path backing -->
+    <path d="M 235 390 C 240 365 258 350 280 350 C 300 350 308 362 302 385 C 315 365 330 350 350 350 C 372 350 380 368 372 395 L 392 352 L 415 352 L 405 405 C 415 385 430 370 450 370 C 470 370 475 390 468 412 C 458 440 415 450 370 450 C 300 450 245 425 235 390 Z"/>
+  </g>
+
+  <!-- Layer 2: Black Inner Body Definition -->
+  <g fill="#101014">
+    <!-- Smooth Connected Cupido & Underline -->
+    <!-- C -->
+    <path d="M 188 238 C 182 225 170 216 154 216 C 122 216 98 245 98 280 C 98 318 126 342 162 342 C 185 342 205 330 215 316 L 195 302 C 188 312 176 320 162 320 C 138 320 122 302 122 278 C 122 252 136 238 152 238 C 164 238 172 246 174 254 Z"/>
+    <!-- u -->
+    <path d="M 205 260 L 222 260 L 216 294 C 213 308 222 318 234 318 C 246 318 256 308 260 294 L 268 260 L 285 260 L 273 322 L 257 322 L 259 310 C 252 318 240 324 228 324 C 208 324 195 310 199 288 Z"/>
+    <!-- p -->
+    <path d="M 282 260 L 299 260 L 295 274 C 302 265 314 258 328 258 C 352 258 368 276 362 304 C 356 332 334 346 310 346 C 300 346 292 342 288 336 L 276 385 L 259 385 Z M 294 302 C 292 314 300 324 312 324 C 326 324 336 312 340 298 C 344 284 336 276 324 276 C 310 276 298 288 294 302 Z"/>
+    <!-- i -->
+    <path d="M 374 240 C 374 233 380 227 388 227 C 396 227 402 233 402 240 C 402 247 396 253 388 253 C 380 253 374 247 374 240 Z M 367 260 L 385 260 L 373 322 L 356 322 Z"/>
+    <!-- d -->
+    <path d="M 436 212 L 416 322 L 400 322 L 402 310 C 395 318 384 324 372 324 C 348 324 334 304 339 280 C 344 254 366 238 390 238 C 402 238 412 244 416 252 L 424 212 Z M 382 262 C 370 262 360 272 358 286 C 356 298 364 306 376 306 C 388 306 398 296 400 282 C 402 270 394 262 382 262 Z"/>
+    <!-- o -->
+    <path d="M 426 280 C 432 254 454 238 478 238 C 500 238 514 254 508 280 C 502 306 480 324 456 324 C 434 324 420 306 426 280 Z M 458 260 C 448 260 440 270 438 282 C 436 294 444 302 454 302 C 464 302 472 292 474 280 C 476 268 468 260 458 260 Z"/>
+
+    <!-- Dynamic Underline Swirl of Cupido -->
+    <path d="M 160 354 C 230 338 320 316 410 295 C 418 293 426 298 424 306 C 420 318 395 330 365 342 C 285 372 205 382 145 372 C 135 370 142 358 160 354 Z"/>
+  </g>
+
+  <!-- Layer 3: Crisp White Script Lettering "Cupido" -->
+  <g fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round">
+    <!-- Stylized "Cupido" text path match -->
+    <text x="250" y="295" 
+          font-family="'Brush Script MT', 'Dancing Script', 'Pacifico', cursive, sans-serif" 
+          font-size="110" 
+          font-weight="bold" 
+          font-style="italic" 
+          text-anchor="middle" 
+          fill="#FFFFFF" 
+          stroke="#101014" 
+          stroke-width="14" 
+          paint-order="stroke fill"
+          letter-spacing="-2px">
+      Cupido
+    </text>
+
+    <!-- White Underline swoop under Cupido -->
+    <path d="M 172 328 C 240 312 320 292 386 282 C 392 281 394 286 388 290 C 340 316 260 342 178 348 C 168 349 164 340 172 328 Z" 
+          fill="#FFFFFF" stroke="#101014" stroke-width="6" paint-order="stroke fill"/>
+  </g>
+
+  <!-- Layer 4: Crisp White Script Lettering "Radio" -->
+  <g fill="#FFFFFF">
+    <text x="310" y="380" 
+          font-family="'Brush Script MT', 'Dancing Script', 'Pacifico', cursive, sans-serif" 
+          font-size="82" 
+          font-weight="bold" 
+          font-style="italic" 
+          text-anchor="middle" 
+          fill="#FFFFFF" 
+          stroke="#101014" 
+          stroke-width="12" 
+          paint-order="stroke fill"
+          letter-spacing="-1px">
+      Radio
+    </text>
+
+    <!-- White Underline stroke under Radio -->
+    <path d="M 248 395 C 290 388 340 380 376 376 C 382 375 382 380 376 383 C 342 396 295 408 245 408 C 238 408 240 400 248 395 Z" 
+          fill="#FFFFFF" stroke="#101014" stroke-width="5" paint-order="stroke fill"/>
+  </g>
+
+  <!-- Bottom Dynamic White Arcs -->
+  <path d="M 155 410 C 205 440 260 448 315 442" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <path d="M 180 435 C 220 452 265 456 305 450" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>

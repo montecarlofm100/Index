@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Vibrant Cupido Red Gradient -->
+    <radialGradient id="cupidoBgGrad" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stopColor="#EA1D42"/>
+      <stop offset="70%" stopColor="#D51336"/>
+      <stop offset="100%" stopColor="#B60A28"/>
+    </radialGradient>
+
+    <!-- Glossy Pink Heart Gradient -->
+    <linearGradient id="pinkHeartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stopColor="#FF2E82"/>
+      <stop offset="50%" stopColor="#E81669"/>
+      <stop offset="100%" stopColor="#C40B54"/>
+    </linearGradient>
+
+    <!-- Shadow filter -->
+    <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Base Circular Badge -->
+  <circle cx="256" cy="256" r="236" fill="url(#cupidoBgGrad)" filter="url(#logoShadow)"/>
+  <circle cx="256" cy="256" r="236" stroke="#A70822" stroke-width="4"/>
+
+  <!-- Decorative Outer Dashed Arcs -->
+  <circle cx="256" cy="256" r="218" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8 16 45 20 180 25 35 15 70 20"/>
+
+  <!-- Sunburst Rays above Heart -->
+  <line x1="256" y1="76" x2="256" y2="116" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  <line x1="224" y1="90" x2="238" y2="116" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="288" y1="90" x2="274" y2="116" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Upper Heart Outline Wireframe -->
+  <path d="M 256 150 C 230 115 160 115 145 165 C 130 215 210 245 256 270 C 302 245 382 215 367 165 C 352 115 282 115 256 150 Z" 
+        stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85"/>
+
+  <!-- Left Angel Wing -->
+  <g fill="#FFFFFF" stroke="#101014" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M 195 235 C 180 205 130 145 110 148 C 108 160 128 178 140 188 C 120 170 98 162 95 174 C 95 186 122 198 135 206 C 112 192 88 190 85 204 C 83 216 115 218 132 222 C 105 215 85 220 83 234 C 82 245 106 242 125 240 C 145 238 185 236 195 235 Z"/>
+    <path d="M 148 185 C 160 198 180 212 190 220" stroke="#E51A3B" stroke-width="2" fill="none"/>
+    <path d="M 138 205 C 152 214 172 222 185 226" stroke="#E51A3B" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Right Angel Wing -->
+  <g fill="#FFFFFF" stroke="#101014" stroke-width="2.5" stroke-linejoin="round">
+    <path d="M 317 235 C 332 205 382 145 402 148 C 404 160 384 178 372 188 C 392 170 414 162 417 174 C 417 186 390 198 377 206 C 400 192 424 190 427 204 C 429 216 397 218 380 222 C 407 215 427 220 429 234 C 430 245 406 242 387 240 C 367 238 327 236 317 235 Z"/>
+    <path d="M 364 185 C 352 198 332 212 322 220" stroke="#E51A3B" stroke-width="2" fill="none"/>
+    <path d="M 374 205 C 360 214 340 222 327 226" stroke="#E51A3B" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Side Small Hearts -->
+  <path d="M 98 226 C 90 218 80 220 78 228 C 76 238 88 244 98 250 C 108 244 120 238 118 228 C 116 220 106 218 98 226 Z" fill="#FFFFFF"/>
+  <path d="M 414 226 C 406 218 396 220 394 228 C 392 238 404 244 414 250 C 424 244 436 238 434 228 C 432 220 422 218 414 226 Z" fill="#FFFFFF"/>
+
+  <!-- Central Pink Heart -->
+  <g>
+    <path d="M 256 226 C 228 178 190 148 214 124 C 236 102 254 128 256 136 C 258 128 276 102 298 124 C 322 148 284 178 256 226 Z" 
+          fill="#101014" stroke="#101014" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M 256 226 C 228 178 190 148 214 124 C 236 102 254 128 256 136 C 258 128 276 102 298 124 C 322 148 284 178 256 226 Z" 
+          fill="#FFFFFF" stroke="#FFFFFF" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M 256 223 C 230 178 194 150 215 127 C 234 107 252 130 256 137 C 260 130 278 107 297 127 C 318 150 282 178 256 223 Z" 
+          fill="url(#pinkHeartGrad)"/>
+    <ellipse cx="230" cy="133" rx="10" ry="6" transform="rotate(-30 230 133)" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+
+  <!-- Typography "Cupido" & "Radio" -->
+  <g fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round">
+    <text x="250" y="295" 
+          font-family="'Brush Script MT', 'Dancing Script', 'Pacifico', cursive, sans-serif" 
+          font-size="110" 
+          font-weight="bold" 
+          font-style="italic" 
+          text-anchor="middle" 
+          fill="#FFFFFF" 
+          stroke="#101014" 
+          stroke-width="16" 
+          paint-order="stroke fill"
+          letter-spacing="-2px">
+      Cupido
+    </text>
+
+    <path d="M 172 328 C 240 312 320 292 386 282 C 392 281 394 286 388 290 C 340 316 260 342 178 348 C 168 349 164 340 172 328 Z" 
+          fill="#FFFFFF" stroke="#101014" stroke-width="6" paint-order="stroke fill"/>
+  </g>
+
+  <g fill="#FFFFFF">
+    <text x="310" y="380" 
+          font-family="'Brush Script MT', 'Dancing Script', 'Pacifico', cursive, sans-serif" 
+          font-size="82" 
+          font-weight="bold" 
+          font-style="italic" 
+          text-anchor="middle" 
+          fill="#FFFFFF" 
+          stroke="#101014" 
+          stroke-width="14" 
+          paint-order="stroke fill"
+          letter-spacing="-1px">
+      Radio
+    </text>
+
+    <path d="M 248 395 C 290 388 340 380 376 376 C 382 375 382 380 376 383 C 342 396 295 408 245 408 C 238 408 240 400 248 395 Z" 
+          fill="#FFFFFF" stroke="#101014" stroke-width="5" paint-order="stroke fill"/>
+  </g>
+
+  <!-- Bottom Dynamic White Arcs -->
+  <path d="M 155 410 C 205 440 260 448 315 442" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <path d="M 180 435 C 220 452 265 456 305 450" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>

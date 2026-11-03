@@ -1,0 +1,8 @@
+{
+  "name": "Cupido Radio - La música que te enamora",
+  "description": "Emisora romántica online oficial. Baladas de amor, música romántica en vivo las 24 horas, programación exclusiva y dedicatorias.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
