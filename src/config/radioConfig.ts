@@ -2,7 +2,7 @@ import { RadioStationConfig } from '../types/radio';
 
 export const CUPIDO_ASSETS = {
   logo: '/Cupido-Color.png',
-  logoColor: 'https://i.ibb.co/hRpQ4YwB/Cupido-Color.png',
+  logoColor: '/Cupido-Color.png',
   coverAlbum: '/assets/cupido_radio_banner.png',
   bannerCollage: '/assets/cupido_radio_banner.png',
   heroBanner: '/assets/cupido_radio_banner.png',

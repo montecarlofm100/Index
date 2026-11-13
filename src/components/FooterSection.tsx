@@ -20,7 +20,7 @@ export const FooterSection: React.FC<FooterSectionProps> = ({
           <img
             src="/Cupido-Color-192.png"
             onError={(e) => {
-              (e.target as HTMLImageElement).src = 'https://i.ibb.co/hRpQ4YwB/Cupido-Color.png';
+              (e.target as HTMLImageElement).src = '/Cupido-Color.png';
             }}
             alt="Cupido Radio"
             className="w-9 h-9 object-contain rounded-full shadow-md"

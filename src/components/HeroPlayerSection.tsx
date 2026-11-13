@@ -130,7 +130,7 @@ export const HeroPlayerSection: React.FC<HeroPlayerSectionProps> = ({ onOpenInst
               <img
                 src="/Cupido-Color-512.png"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'https://i.ibb.co/hRpQ4YwB/Cupido-Color.png';
+                  (e.target as HTMLImageElement).src = '/Cupido-Color.png';
                 }}
                 alt="Cupido Radio Logo"
                 className="relative z-10 w-32 h-32 sm:w-40 sm:h-40 object-contain rounded-full shadow-2xl drop-shadow-2xl transition-transform duration-500 hover:scale-105"

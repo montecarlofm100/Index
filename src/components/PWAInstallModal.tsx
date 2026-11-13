@@ -124,7 +124,7 @@ export const PWAInstallModal: React.FC<PWAInstallModalProps> = ({ isOpen, onClos
                 <img
                   src="/Cupido-Color-192.png"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://i.ibb.co/hRpQ4YwB/Cupido-Color.png';
+                    (e.target as HTMLImageElement).src = '/Cupido-Color.png';
                   }}
                   alt="Cupido Radio"
                   className="w-16 h-16 rounded-full object-contain shadow-lg shadow-cupido-red/30"

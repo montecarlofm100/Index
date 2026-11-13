@@ -41,6 +41,7 @@ export const RadioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const reconnectTimeoutRef = useRef<number | null>(null);
   const sleepTimerIntervalRef = useRef<number | null>(null);
+  const wasPlayingRef = useRef<boolean>(false);
 
   // Programs state with persistence
   const [programs, setPrograms] = useState<ProgramShow[]>(() => {
@@ -181,7 +182,7 @@ export const RadioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     return () => clearInterval(interval);
   }, [computeCurrentShow]);
 
-  // Audio element initialization
+  // Audio element initialization with auto-reconnection on network recovery
   useEffect(() => {
     const audio = new Audio();
     audio.preload = 'none';
@@ -211,12 +212,44 @@ export const RadioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
     const onError = () => {
       console.warn('Audio streaming error encountered');
-      setPlaybackState('error');
-      setErrorMessage(
-        'No se pudo conectar con la señal en directo. Verifica tu software emisor (RadioBOSS / BUTT / SAM) o toca Reintentar.'
-      );
+      if (wasPlayingRef.current) {
+        setPlaybackState('reconnecting');
+        setErrorMessage('Reconectando automáticamente...');
+        if (reconnectTimeoutRef.current) clearTimeout(reconnectTimeoutRef.current);
+        reconnectTimeoutRef.current = window.setTimeout(() => {
+          if (wasPlayingRef.current) {
+            play();
+          }
+        }, 2000);
+      } else {
+        setPlaybackState('error');
+        setErrorMessage('No se pudo conectar con la señal en directo.');
+      }
       if ('mediaSession' in navigator) {
         navigator.mediaSession.playbackState = 'none';
+      }
+    };
+
+    const onStalled = () => {
+      if (wasPlayingRef.current) {
+        console.warn('Audio playback stalled, reconnecting...');
+        reconnect();
+      }
+    };
+
+    const handleOnline = () => {
+      console.log('Internet connection restored');
+      if (wasPlayingRef.current) {
+        setErrorMessage(null);
+        reconnect();
+      }
+    };
+
+    const handleOffline = () => {
+      console.log('Internet connection lost');
+      if (wasPlayingRef.current) {
+        setPlaybackState('error');
+        setErrorMessage('Sin conexión a Internet. Se reconectará automáticamente al recuperar la señal.');
       }
     };
 
@@ -224,12 +257,18 @@ export const RadioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     audio.addEventListener('playing', onPlaying);
     audio.addEventListener('pause', onPause);
     audio.addEventListener('error', onError);
+    audio.addEventListener('stalled', onStalled);
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
 
     return () => {
       audio.removeEventListener('waiting', onWaiting);
       audio.removeEventListener('playing', onPlaying);
       audio.removeEventListener('pause', onPause);
       audio.removeEventListener('error', onError);
+      audio.removeEventListener('stalled', onStalled);
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
       audio.pause();
       audio.src = '';
     };
@@ -295,6 +334,7 @@ export const RadioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const play = async () => {
     if (!audioRef.current) return;
+    wasPlayingRef.current = true;
     try {
       setPlaybackState('loading');
       setErrorMessage(null);
@@ -317,6 +357,7 @@ export const RadioProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
   const pause = () => {
     if (!audioRef.current) return;
+    wasPlayingRef.current = false;
     audioRef.current.pause();
     audioRef.current.src = '';
     setPlaybackState('paused');

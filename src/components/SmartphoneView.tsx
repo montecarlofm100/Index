@@ -60,7 +60,7 @@ export const SmartphoneView: React.FC<SmartphoneViewProps> = ({
           <img
             src="/Cupido-Color-192.png"
             onError={(e) => {
-              (e.target as HTMLImageElement).src = 'https://i.ibb.co/hRpQ4YwB/Cupido-Color.png';
+              (e.target as HTMLImageElement).src = '/Cupido-Color.png';
             }}
             alt="Cupido Radio"
             className="w-10 h-10 object-contain rounded-full shadow-lg"
@@ -106,7 +106,7 @@ export const SmartphoneView: React.FC<SmartphoneViewProps> = ({
                 <img
                   src="/Cupido-Color-512.png"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = 'https://i.ibb.co/hRpQ4YwB/Cupido-Color.png';
+                    (e.target as HTMLImageElement).src = '/Cupido-Color.png';
                   }}
                   alt="Cupido Radio"
                   className={`w-62 h-62 object-contain rounded-full shadow-2xl transition-transform duration-500 ${

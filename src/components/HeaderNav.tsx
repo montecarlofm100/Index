@@ -30,8 +30,7 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({
           <img
             src="/Cupido-Color-192.png"
             onError={(e) => {
-              // fallback if needed
-              (e.target as HTMLImageElement).src = 'https://i.ibb.co/hRpQ4YwB/Cupido-Color.png';
+              (e.target as HTMLImageElement).src = '/Cupido-Color.png';
             }}
             alt="Cupido Radio"
             className="w-11 h-11 object-contain rounded-full shadow-lg group-hover:scale-105 transition-transform duration-300"
